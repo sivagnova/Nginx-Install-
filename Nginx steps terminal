@@ -1,0 +1,42 @@
+How to Install Nginx on Ubuntu 14.04 LTS
+
+sudo apt-get -y install nginx
+
+sivag@sivag:~$ cd /etc/nginx/
+sivag@sivag:/etc/nginx$ ls
+conf.d          mime.types           nginx.conf       sites-enabled
+fastcgi_params  naxsi_core.rules     proxy_params     uwsgi_params
+koi-utf         naxsi.rules          scgi_params      win-utf
+koi-win         naxsi-ui.conf.1.4.1  sites-available
+sivag@sivag:/etc/nginx$ 
+
+sivag@sivag:~$ ip addr show eth0 | grep inet
+    inet 192.168.2.15/24 brd 192.168.2.255 scope global eth0
+    inet6 fe80::feaa:14ff:fe88:3473/64 scope link 
+    
+    sivag@sivag:~$ cd /usr/share/nginx/
+sivag@sivag:/usr/share/nginx$ ls
+html
+sivag@sivag:/usr/share/nginx$ cd html/
+sivag@sivag:/usr/share/nginx/html$ ls
+50x.html  index.html
+sivag@sivag:/usr/share/nginx/html$ vi index.html
+
+Step #3: Manage the nginx Service
+
+Start the nginx Service:
+
+service nginx start
+
+Stop the nginx Service:
+
+service nginx stop
+
+Restart the nginx Service:
+
+service nginx restart
+
+Check the Status of the nginx Service:
+
+service nginx status
+
